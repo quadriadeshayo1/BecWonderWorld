@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --orange:#ffa500;
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: var(--orange);
+    color: #fff;
+}
+.nav{
+    padding: 1rem;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    background:transparent;
+    transition: 2s ease;
+}
+.header__img img{
+    height: 25%;
+    width: 25%;
+    border-radius: 50%;
+}
+.header.fixed{
+    background-color: #D2D3D5 ;
+    box-shadow: 0.5px 0.5px red; 
+}
+.nav__list{
+    display: flex;
+}
+.nav__item{
+     list-style: none;
+}
+.nav__item a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+}
+.nav__link{
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    font-weight: 700;
+}
+.nav__toggle{
+    display: none;
+}
+.header__bg{
+    background: linear-gradient(
+                rgba(0,0,0, .7),
+                rgba(0,0,0, .7)
+                ),
+                url('../images/home');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+    /* padding-bottom: .3rem; */
+    /* height: 100vh; */
+}
+.header__text{
+    text-align: center;
+    justify-content: center;
+    padding: 20rem 0rem;
+    color: aliceblue;
+    text-shadow: 1px 2px 0 0 #000;
+    border-color: black;
+}
+.header__text h1{
+    font-size: 45px;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.header__text h2{
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.header__text h3{
+    font-weight: 900;
+    font-family: comic sans-serif;
+    font-size: 35px;
+}
+@media screen and (max-width:768px){
+    .l__header{
+        height: 5vh;
+        position: fixed;
+    }
+    .nav{
+        height: 6rem;
+    }
+    .header__img img{
+        height: 5rem;
+        width: 5rem;
+    }
+    .nav__toggle{
+        display: inline-block;
+        color: #fff;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+    .nav__menu{
+        position: fixed;
+        top: 3rem;
+        right: -100%;
+        width: 60%;
+        height: 100%;
+        padding-top: 4rem;
+        padding-left: 1rem;
+        background-color: #D2D3D5;
+        transition: 0.5s;
+    }
+    .nav__list{
+        display: inline;
+        margin-top: 2rem;
+    }
+    .nav__item{
+        margin-bottom: 4rem;
+    }
+    .header__text h1{
+        font-size: 35px;
+    }
+    .header__text h2{
+        font-size: 30px;
+        padding-bottom: 1rem;
+    }
+    .header__text h3{
+        font-size: 25px;
+    }
+    .header__text p{
+        font-size: 20px;
+        /* font-weight: bolder; */
+    }
+    .show{
+        right: 0;
+        transition: 0.7s ease-in-out;
+    }
+}
+
+
+/* About section starts */
+.about{
+    background: #D2D3D5;
+    height: auto;
+    padding-bottom: 2rem;
+}
+.about__title{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+    /* padding-bottom: 2rem; */
+    text-transform: uppercase;
+    align-items: center;
+}
+.about__title h1{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.about__content{
+    padding: 3rem;
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+.about__text p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.about__img img{
+    border-radius: 10%;
+    width: 100%;
+}
+@media screen and (max-width:768px){
+    .about__content{
+        flex-direction: column;
+    }
+    .about__text p{
+        font-size: 1rem;
+    }
+}
+
+/* author */
+.author__section{
+    height: auto;
+    background:  #D2D3D5;
+    padding: 1rem;
+    padding-bottom: 3rem;
+}
+.about__author h1{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+.about__author__img img{
+    width: 50%;
+    height: 50%;
+    float: left;
+    margin: 0 1rem 1rem;
+    border-radius: 10%;
+}
+.about__author__text p{
+    font-size: 1.1rem;
+}
+@media screen and (min-width:768px){
+    .author__section{
+        padding-bottom: 6rem;
+    }
+    .about__author h1{
+        padding: 2.5rem;
+        text-transform: uppercase;
+        font-size: 2rem
+    }
+    .about__author__txt{
+        text-align: center;
+    }
+    .about__author__img img{
+      height: 30%;
+      width: 30%;
+    }
+    .about__author__text p{
+        font-size: 1.3rem;
+    }
+}
+
+/* shop */
+.product{
+    height: auto;
+    background: #E6E7E8;
+    padding: 2rem 2rem 5rem 2rem;
+}
+.product__title h1{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-top: 2rem;
+}
+.swiper{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+.swiper__title h1{
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+.swiper-slide{
+    text-align: center;
+    background: #D2D3D5;
+    align-items: center;
+    padding: 1rem;
+    width: auto;
+    height: 40vh;
+    margin: 1rem 5rem 3rem 0;
+    border-radius: 10%;
+    cursor: pointer;
+}
+.swiper-slide img {
+    padding-top: 1rem;
+    width: 40%;
+    height: 40%;
+    /* border-radius: 15px; */
+    box-shadow: 2px solid green;
+}
+.swiper-slide h1{
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.swiper-slide-2{
+    text-align: center;
+    background: #D2D3D5;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: 40vh;
+    border-radius: 10%;
+    margin-bottom: 1rem;
+}
+.swiper-more{
+    padding-top: 5rem;
+    margin-left: 4.5rem;
+    margin-top: 2rem;
+    width: 50%;
+    height: 80%;
+    border-radius: 15%;
+    box-shadow: 2px solid green;
+    background-image: linear-gradient(
+    rgba(222, 191, 191, 0.937),
+    rgba(222, 191, 191, 0.937)),
+    url(../images/revision\ workbook.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.swiper-more a{
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.swiper h1{
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+@media screen and (min-width:600px){
+    .swiper{
+        width: 40%;
+    }
+    .swiper-more{
+        width: 70%;
+        margin-left: 2rem;
+    }
+}
+@media screen and (min-width:768px){
+    .swiper-more{
+        width: 40%;
+        margin-left: 8rem;
+    }
+}
+
+
+/* contact */
+.contact{
+    background: #D2D3D5;
+    height: auto;
+    padding: 2rem;
+}
+.contact-section h1{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-top: 3rem;
+}
+.contact-icons{
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+    text-align: left;
+    font-size: 1.5rem;
+    align-items: left;
+    justify-content: space-between;
+}
+.icons p{
+    text-transform: lowercase;
+    text-align: left;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.form input{
+    margin-bottom: .5rem;
+    height: 3rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+.form textarea{
+    height: 7rem;
+    margin-bottom: .5rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+.form button{
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+@media screen and (max-width:786px){
+    .contact-icons{
+        flex-direction: column;
+        font-size: 1rem;
+    }
+}
+
+/* reviews */
+.review__section{
+    height: auto;
+    background: #D2D3D5;
+    padding: .3rem;
+}
+.review__title h1{
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+.review__image{
+    text-align: center;
+    margin: 1rem 0;
+}
+.review__image img{
+    border-radius: 5%;
+    /* width: 100%;
+    height: 100%; */
+}
+.review__section{
+    padding-bottom: 2rem;
+}
+.review__content{
+    padding-bottom: 2rem;
+}
+.review__content h2,
+.review__review h2{
+    font-size: 1.7rem;
+    padding-bottom: .5rem;
+}
+.review__content p{
+    font-size: 1.2rem;
+}
+.reviews h3{
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+}
+.reviews h5{
+    font-size: 1.2rem;
+}
+.reviews p{
+    font-size: 1.1rem;
+}
+@media screen and (max-width:768px){
+    .review__image img{
+        width: 50%;
+        
+    }
+    .review__content h2,
+    .review__review h2{
+        font-size: 1.3rem;
+        padding-bottom: .5rem;
+    }
+    .review__title h1{
+        font-size: 1.5rem;
+    }
+}
+/* footer */
+.footer{
+    padding: .5rem;
+    background: #D2D3D5;
+}
+.footer__bg p{
+    font-size: .9rem;
+    color: #fff;
+    text-align: center;
+}
+@media screen and (min-width:768px){
+    .footer__bg p{
+        font-size: 1.5rem;
+    }
+}
